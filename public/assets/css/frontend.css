@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    padding: 20px 10%;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h3{
+    color: rgb(114, 182, 114);
+    font-weight: bold;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    margin-right: 50px;
+    
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    padding: 10px;
+}
+
+nav ul li a::before{
+    content: '';
+    width: 100%;
+    height: 0px;
+    background: #d9f688;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: height 0.5s;
+}
+
+nav ul li a:hover:before{
+    height: 85px;
+
+}
+
+.row{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex-basis: 50%;
+    position: relative;
+}
+
+.feature-img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.col h1{
+    margin-top: 140px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.col a{
+    text-decoration: none;
+    padding: 18px 50px;
+    border-radius: 30px;
+    background: #d9f688;
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    margin-top: 70px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* login form */
+
+
+.box{
+    position: relative;
+    width: 380px;
+    height: 480px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.form{
+    position: absolute;
+    background: #28292d;
+    inset: 2px;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2{
+    color: rgb(114, 182, 114);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    margin-top: 35px;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox span{
+    position: absolute;
+    padding: 20px 0px 10px;
+    left: 0;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    color: rgb(114, 182, 114);
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(114, 182, 114);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+    height: 44px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover,
+.links a:nth-child(2){
+    color: rgb(114, 182, 114);
+}
+
+input[type="submit"]{
+    border: none;
+    outline: none;
+    background: rgb(114, 182, 114);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.card-body .seats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-body .seats li{
+    display: block;
+    list-style: none;
+}
+
+.card-body .seats li input{
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background-color: #000;
+}
+
