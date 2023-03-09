@@ -38,12 +38,4 @@ class TicketController extends Controller
         return view('frontend.ticket.index', compact('tickets'));
     }
 
-    public function book(Ticket $ticket){
-
-        dd($ticket);
-        return view('frontend.ticket.book', compact('ticket'));
-    
-
-    }
-
 }

@@ -26,7 +26,14 @@
                                 <a href="/public/user/logout">Logout</a>
                             </li> -->
                     
-                   
+                            @auth
+                            <li>
+                                <a href="/public/ticket/search">Tickets</a>
+                            </li>
+                                
+                            @endauth
+                            @guest
+                                
                             <li>
                                 <a href="{{url('/login')}}">Login</a>
                             </li>
@@ -34,6 +41,7 @@
                                 <a href="{{url('/register')}}">Register</a>
                             </li>
                  
+                            @endguest
                             <!-- <li>
                                 <a href="/public/ticket/search">Tickets</a>
                             </li>

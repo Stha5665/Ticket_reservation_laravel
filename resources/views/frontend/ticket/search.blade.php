@@ -6,8 +6,8 @@
                     <h3>Search Ticket</h3>
                 </div>
                 <div class="card-body">
-                    <form action="{{ url('/tickets/show') }}" method="POST">
-                        @csrf
+                    <form action="{{ route('ticket.show') }}" method="GET">
+                    
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label>Origin</label>

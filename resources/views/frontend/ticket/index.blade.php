@@ -19,8 +19,8 @@
                                         <th>Destination</th>
                                         <th>Departure</th>
                                         <th>Bus Name</th>
-                                        <th>Ticket Remaining</th>
-                                        <th class="col-md-3">No of tickets</th>
+                                        <!-- <th>Ticket Remaining</th>
+                                        <th class="col-md-3">No of tickets</th> -->
                                         <th class="col-md-1">Action</th>
                                     </tr>
                                 </thead>
@@ -33,21 +33,20 @@
                                         <td>{{ $ticket->route->destination }}</td>
                                         <td>{{ $ticket->depart_date_time }}</td>
                                         <td>{{$ticket->bus->name }}</td>
-                                        <td>{{$ticket->bus->seat_capacity }}</td>
-                                        <td>
+                                        <!-- <td> -->
                                             <!-- <div class="d-flex"> -->
-                                                <form action="" method="POST">
+                                                <!-- <form action="" method="POST">
                                                     <input type="hidden" name="ticket_id" value="{{$ticket->id}}">
                        
                                                     <input type="number" class="form-control" name="ticket_quantity" min="1" max="{{$ticket->bus->seat_capacity}}" required />
-                                                    <button type="submit" class="btn btn-sm btn-outline-success m-1" onclick="return confirm('Are you sure you want to Book the ticket ?')"><i class="fa fa-book">Book</i></button>
-                                                </form>
+                                                    <button type="submit" class="btn btn-sm btn-outline-success m-1" onclick="return confirm('Are you sure you want to Book the ticket ?')">Book</button>
+                                                </form> -->
                                             <!-- </div> -->
 
-                                        </td>
+                                        <!-- </td> -->
                                        
                                         <td>
-                                            <a href="/tickets/book/" class="btn btn-sm btn-outline-success m-1"><i class="fa fa-book">Book</i></a>
+                                            <a href="{{route('booking.create', 'ticket='.$ticket->id) }}" class="btn btn-sm btn-outline-success m-1">Book</a>
                                             
                                             <a href="/public/bus/getBusDetails?id=" class="btn btn-sm btn-outline-success mt-1">Bus<i class="fa fa-bus" style="margin-left: 2px;" ></i></a>
                                         </td>

@@ -7,9 +7,11 @@ use App\Http\Controllers\Admin\RouteController;
 use App\Http\Controllers\Admin\TicketController;
 
 
+
 // for frontend
 
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\BookingController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -48,6 +50,7 @@ require __DIR__.'/auth.php';
 
 Route::middleware('auth')->group(function () {
     Route::get('/tickets', [App\Http\Controllers\Frontend\TicketController::class, 'index']);
-    Route::post('/tickets/show', [App\Http\Controllers\Frontend\TicketController::class, 'show']);
-    Route::get('/tickets/book/', [App\Http\Controllers\Frontend\TicketController::class, 'book']);
+    Route::get('/tickets/show', [App\Http\Controllers\Frontend\TicketController::class, 'show'])->name('ticket.show');
+    Route::get('/bookings/create/', [BookingController::class, 'create'])->name('booking.create');
+    Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 });
